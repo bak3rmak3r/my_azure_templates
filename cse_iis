@@ -16,5 +16,8 @@
     "protectedSettings": {
       "commandToExecute": "powershell -ExecutionPolicy Unrestricted -File configure-iis.ps1"
     }
-  }
+  },
+  "dependsOn": [
+    "[resourceId('Microsoft.Compute/virtualMachines/', variables('vmName'))]"
+  ]
 }
